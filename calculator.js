@@ -4,7 +4,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.get('/:operation/:firstNum/:secNum', function (req, res) {
-	var operation = req.params.operation;
+	var operation = req.params.operation.toLowerCase();
 	var firstNum = parseInt(req.params.firstNum);
 	var secNum = parseInt(req.params.secNum);
 	var result;
